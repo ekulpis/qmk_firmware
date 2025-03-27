@@ -1,6 +1,6 @@
 #pragma once
 
-//#define MASTER_LEFT
+#define MASTER_RIGHT
 #define TAPPING_TERM 175
 #define HOLD_ON_OTHER_KEY_PRESS
 #define TAPPING_FORCE_HOLD
