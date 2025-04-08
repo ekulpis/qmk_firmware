@@ -8,20 +8,20 @@ enum layers {
     _NAV,
     _NUM,
     _MOUS,
-    _MEDIA,
+    _MEDIA
 };
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KC_NO,    UK_Q,    UK_W,    UK_E,    UK_R,    UK_T,                         UK_Y,    UK_U,    UK_I,    UK_O,   UK_P,   KC_NO,
+      KC_ESC,    UK_Q,    UK_W,    UK_F,    UK_P,    UK_B,                       UK_J,  UK_L,  UK_U,     UK_Y,   UK_QUOT,    KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_NO,    UK_A,    UK_S,    UK_D,    UK_F,    UK_G,                         UK_H,    UK_J,    UK_K,   UK_L,   UK_SCLN,   KC_NO,
+      CTRL, CTL_T(UK_A),  ALT_T(UK_R),  SFT_T(UK_S), GUI_T(UK_T),    UK_G,       UK_M,  GUI_T(UK_N),  SFT_T(UK_E), ALT_T(UK_I), CTL_T(UK_O),     KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_NO,    UK_Z,    UK_X,    UK_C,    UK_V,    UK_B,                       UK_N,  UK_M,  UK_COMM,  UK_DOT, UK_SLSH,   KC_NO,
+      KC_NO,    UK_Z,    UK_X,    UK_C,    UK_D,    UK_V,                       UK_K,  UK_H,  UK_COMM,  UK_DOT, UK_SCLN,     KC_ENT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          MOUSE, NAV, SHFT,            KC_SPC,  SYM, MEDIA
+                                          KC_NO, NAV, KC_SPC,            SHFT,  SYM, KC_NO
                                           
                                       //`--------------------------'  `--------------------------'
 
@@ -30,11 +30,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SYM] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KC_TRNS,  KC_ESC, UK_LBRC,  UK_LCBR,  UK_LPRN,  TILDA,                      UK_CIRC, UK_RPRN, UK_RCBR, UK_RBRC, UK_BSLS, KC_TRNS,
+      KC_TRNS,  KC_ESC, UK_LBRC,  UK_LCBR,  UK_LPRN,  TILDA,                      UK_CIRC, UK_RPRN, UK_RCBR, UK_RBRC, GRAVE, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_TRNS,  UK_MINS, UK_ASTR, UK_EQL, UK_UNDS, UK_DLR,                      MYHASH,   CMD,    SHFT,     ALT,    CTRL,   KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_TRNS,  UK_PLUS, PIPE, ATAT, UK_SLSH, UK_PERC,                          KASHISH, KC_NUHS, UK_AMPR, UK_QUES, UK_EXLM, KC_TRNS,
+      KC_TRNS,  UK_PLUS, PIPE, UK_DQUO, UK_SLSH, UK_PERC,                          KASHISH, KC_NUHS, UK_AMPR, UK_QUES, UK_EXLM, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,  KC_TRNS, KC_TRNS
                                       //`--------------------------'  `--------------------------'
@@ -43,17 +43,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_NAV] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KC_TRNS, KC_TAB,   KC_NO,  KC_NO, KC_NO,     KC_NO,                        KC_NO,   KC_NO,   KC_UP,  KC_INS,  KC_DEL,  KC_TRNS,
+      KC_TRNS, KC_TAB,   KC_NO,  KC_NO,   KC_NO,  KC_NO,                        KC_NO,   KC_NO,   KC_UP,  KC_INS,  KC_DEL,  KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_TRNS,  CTRL,    ALT,   SHFT,      CMD,  C(KC_UP),                      SCRNSHOT,  KC_LEFT, KC_DOWN, KC_RIGHT, KC_BSPC, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_TRNS, M_UNDO, M_CUT, M_COPY,  QK_REP,  M_PSTE,                      KC_HOME, KC_PGUP, KC_PGDN, KC_END,  KC_ENT,  KC_TRNS,
+      KC_TRNS, KC_UNDO, KC_CUT, KC_COPY,  QK_REP,  KC_PSTE,                      KC_HOME, KC_PGUP, KC_PGDN, KC_END,  KC_ENT,  KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_TRNS, KC_TRNS, KC_TRNS,      LAU, KC_TRNS, KC_TRNS
                                       //`--------------------------'  `--------------------------'
 
   ),
-
 
 
     [_NUM] = LAYOUT_split_3x6_3(
@@ -74,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_NO,   CTRL,    ALT,     SHFT,   CMD,   KC_NO,                          KC_WH_L, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_R,  KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_NO,  M_UNDO,  M_CUT, M_COPY, KC_AGIN, M_PSTE,                      KC_NO,   KC_WH_D, KC_NO,   KC_NO,   KC_WH_R,  KC_NO,
+      KC_NO,  KC_UNDO,  KC_CUT, KC_COPY, KC_AGIN, KC_PSTE,                      KC_NO,   KC_WH_D, KC_NO,   KC_NO,   KC_WH_R,  KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_TRNS, KC_TRNS, KC_TRNS,    KC_BTN1, KC_BTN2, KC_BTN3
                                       //`--------------------------'  `--------------------------'

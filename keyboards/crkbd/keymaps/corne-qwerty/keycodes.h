@@ -3,8 +3,6 @@
 #include "quantum.h"
 #include "keymap_uk.h"
 
-
-
 // Layer keys
 #define SYM MO(_SYM)
 #define NAV MO(_NAV)
@@ -27,7 +25,6 @@
 #define W_R A(KC_RIGHT)     // move word right
 #define LAU G(KC_SPC)    // Launcher for krunner 
 
-
 //One Shot Modifiers
 #define CTRL OSM(MOD_LCTL)
 #define ALT OSM(MOD_LALT)
@@ -42,7 +39,6 @@
 #define ATAT S(UK_2)
 #define MYHASH A(UK_3)
 #define KASHISH S(UK_3)
-
 
 //MacOS shortcuts
 #define SCRNSHOT G(S(UK_4))

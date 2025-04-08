@@ -1,0 +1,9 @@
+#pragma once
+
+#define MASTER_RIGHT
+#define TAPPING_TERM 200
+#define QUICK_TAP_TERM 0
+// #define HOLD_ON_OTHER_KEY_PRESS
+#define PERMISIVE_HOLD
+#define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+#define CHORDAL_HOLD
