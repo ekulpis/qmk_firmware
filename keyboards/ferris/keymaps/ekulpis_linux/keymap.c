@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_SYM] = LAYOUT_split_3x5_2(
       KC_ESC, UK_LBRC,  UK_LCBR,  UK_LPRN,  TILDA,                      UK_CIRC, UK_RPRN, UK_RCBR, UK_RBRC, GRAVE,
       UK_MINS, UK_ASTR, UK_EQL, UK_UNDS, UK_DLR,                        MYHASH,   CMD,    SHFT,     ALT,    CTRL,
-      UK_PLUS, PIPE, UK_DQUO, UK_SLSH, UK_PERC,                         KASHISH, KC_NUHS, UK_AMPR, UK_QUES, UK_EXLM,
+      UK_PLUS, PIPE, UK_DQUO, UK_SLSH, UK_PERC,                         KASHISH, UK_BSLS, UK_AMPR, UK_QUES, UK_EXLM,
                             KC_TRNS, KC_TRNS,   KC_TRNS,  KC_TRNS
                               ),
 
